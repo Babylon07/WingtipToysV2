@@ -71,7 +71,7 @@ namespace WingtipToysV2.Models
                     Description = "There's nothing old about this toy car, except it's looks. Compatible with other old toy cars.",
                     ImagePath="carearly.png",
                     UnitPrice = 15.95,
-                     CategoryID = 1
+                    CategoryID = 1
                },
                 new Product
                 {
