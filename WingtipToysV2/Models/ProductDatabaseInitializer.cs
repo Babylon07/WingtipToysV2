@@ -8,6 +8,7 @@ namespace WingtipToysV2.Models
 {
     public class ProductDatabaseInitializer : DropCreateDatabaseIfModelChanges<ProductContext>
     {
+        // Override the Seed property using ProductContext calss
         protected override void Seed(ProductContext context)
         {
             GetCategories().ForEach(c => context.Categories.Add(c));
