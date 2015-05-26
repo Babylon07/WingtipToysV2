@@ -1,0 +1,44 @@
+1  Create project ASP.net application => Webforms
+
+2. ADDED DATA ACCESS LAYER
+	Added Entity classes 'Product' and 'Category' for the two tables
+	and ProductContext abd ProductDatabaseIntialiser  to create Database
+	and to seed with data
+
+3. CONFIGURED APPLICATION TO USE DATA MAODEL
+	- Added codce to Global.aspx in the Application start method for intialisation.
+	- Updated Connection strings in Web config files
+	- Built the  application
+
+4. UI & Navigation
+	- Added specific info in Default.aspx -  @Page Directive, Title, Description etc
+	- Updated Site.Master page to inlcude title's and logo
+	- Added Image folder/files to project
+
+5. ADDED PAGES
+	- Added ProductList.aspx and ProductDetails.aspx using 'Web Form with Master Page' option.
+	
+6. UPDATED BOOTSRAP	
+	- Updated Bootstrap files to use Cerulean theme.
+
+7. NODIFIED DEFAULT NAVIGATION
+	- Added extra link to 'ProductList.aspx'page in Site.Matser page.
+
+8. ADDED DATA CONTROL TO DISPLAY CATEGORIES
+	- Added ListView control to display all categories in 'Site.Master' page
+
+9. LINKED CATEGOREIS DATA CONTROL TO DATABASE
+	- Added 'GetCategories' method in 'Site.Msster.cs' page to retrieve categories
+
+10. RUN THE APPLICATION TO CREATE THE DATABASE
+	- Run application to test database created and all OK
+
+11. ADDED A DATA CONTROL TO DISPLAY PRODUCTS
+    - Created a ListView in Products.aspx to display all the products.
+	- Added  GetProducts method in ProductList.aspx.cs in order to populate the ListView
+	  and display by Category.
+
+12. ADDED A DATA CONTROL TO DISPLAY PRODUCT DETAILS
+	- Created a FormView in ProductDetails.aspx to display single product
+	- Added GetProduct Method to populate the FormView.
+	
