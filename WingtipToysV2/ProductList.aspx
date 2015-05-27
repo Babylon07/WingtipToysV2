@@ -7,7 +7,8 @@
             <hgroup>
                 <h2><%: Page.Title %></h2>
             </hgroup>
-
+            
+            <!-- Display all products -->
             <asp:ListView ID="productList" runat="server"
                 DataKeyNames ="ProductID" GroupItemCount ="4"
                 ItemType ="WingtipToysV2.Models.Product" SelectMethod="GetProducts">
@@ -44,7 +45,7 @@
                                     </a>
                                     <br />
                                     <span>
-                                        <b>Price:</b><%#:String.Format("{0:c}", Item.UnitPrice) %>
+                                        <b>Price: </b><%#:String.Format("{0:c}", Item.UnitPrice) %>
                                     </span>
                                     <br />
                                 </td>

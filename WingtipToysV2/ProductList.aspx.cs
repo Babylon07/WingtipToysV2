@@ -16,16 +16,22 @@ namespace WingtipToysV2
 
         }
 
+        // Fetch products to populate ListView in 'ProductList.aspx'
+        // 'Id' is passed from ListView in 'Site.Master' page.
         public IQueryable<Product> GetProducts([QueryString("id")] int? categoryId)
         {
             var _db = new ProductContext();
             IQueryable<Product> query = _db.Products;
+           
+            // If 'ProductList.aspx' navigated to using Category links,
+            // then show only products with CategoryID matching chosen link ("id")
             if(categoryId.HasValue && categoryId > 0)
             {
                 query = query.Where(p => p.CategoryID == categoryId);
             }
+            
             return query;
-
+           
         }
     }
 }

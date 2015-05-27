@@ -73,7 +73,7 @@ namespace WingtipToysV2
 
         }
 
-        // Link to Category ListView to database
+        // Link Category ListView in 'Site.Master.aspx' to database
         public IQueryable<Category> GetCategories()
         {
             var _db = new WingtipToysV2.Models.ProductContext();
