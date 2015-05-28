@@ -1,0 +1,7 @@
+﻿1. Team explorer -> Connect to teamProjects->Local GitRepositories -> Clone
+
+2. copy/paste your gitHub adress from browser
+
+3. Select local path for this project
+
+4. Open local project
