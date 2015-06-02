@@ -41,4 +41,16 @@
 12. ADDED A DATA CONTROL TO DISPLAY PRODUCT DETAILS
 	- Created a FormView in ProductDetails.aspx to display single product
 	- Added GetProduct Method to populate the FormView.
+
+13. CREATED A SHOPPING CART
+	- Created CartItem class
+	- Updated ProductContext class with CartITem
+	- Created ShoppingCartActions.cs so products can be included in the shopping cart	
+
+14. CREATED THE ADD TO CART FUNCTIONALITY
+	- Added the AddToCart.aspx page
+	- Added the c page which display products added to cart
+	- Added code to ShoppingCart.aspx.cs populate the Grid view in ShoppingCart.aspx 
+	- Added Shopping cart link in ProductList.aspx
+	
 	
