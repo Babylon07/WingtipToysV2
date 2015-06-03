@@ -16,6 +16,7 @@ namespace WingtipToysV2.Models
         // Use the Entity classes to create tables named: 'Categories' & 'Products'
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<CartItem> ShoppingCartItems { get; set; }
 
     }
 }
