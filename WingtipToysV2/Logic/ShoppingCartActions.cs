@@ -9,17 +9,19 @@ namespace WingtipToysV2.Logic
     public class ShoppingCartActions : IDisposable
     {
         public string ShoppingCartId { get; set; }
+
         private ProductContext _db = new ProductContext();
+
         public const string CartSessionKey = "CartId";
 
         public void AddToCart(int id)
         {
-            // Retrieve the product from the database
+            // Retrieve the product from the database.           
             ShoppingCartId = GetCartId();
+
             var cartItem = _db.ShoppingCartItems.SingleOrDefault(
                 c => c.CartId == ShoppingCartId
-                    && c.ProductId == id);
-
+                && c.ProductId == id);
             if (cartItem == null)
             {
                 // Create a new cart item if no cart item exists.                 
@@ -58,26 +60,26 @@ namespace WingtipToysV2.Logic
         {
             if (HttpContext.Current.Session[CartSessionKey] == null)
             {
-                if(!string.IsNullOrWhiteSpace(HttpContext.Current.User.Identity.Name))
+                if (!string.IsNullOrWhiteSpace(HttpContext.Current.User.Identity.Name))
                 {
                     HttpContext.Current.Session[CartSessionKey] = HttpContext.Current.User.Identity.Name;
                 }
+                else
+                {
+                    // Generate a new random GUID using System.Guid class.     
+                    Guid tempCartId = Guid.NewGuid();
+                    HttpContext.Current.Session[CartSessionKey] = tempCartId.ToString();
+                }
             }
-            else           
-            {
-                // Generate a new random GUID using Syste.Guid class
-                Guid tempCartId = Guid.NewGuid();
-                HttpContext.Current.Session[CartSessionKey] = tempCartId.ToString();              
-            }
-
             return HttpContext.Current.Session[CartSessionKey].ToString();
         }
 
-        
         public List<CartItem> GetCartItems()
         {
             ShoppingCartId = GetCartId();
-            return _db.ShoppingCartItems.Where(c => c.CartId == ShoppingCartId).ToList();
+
+            return _db.ShoppingCartItems.Where(
+                c => c.CartId == ShoppingCartId).ToList();
         }
     }
 }

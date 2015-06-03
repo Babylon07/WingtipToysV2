@@ -9,7 +9,7 @@
              </div>
 
             <asp:GridView ID="CartList" runat="server" AutoGenerateColumns="False" ShowFooter="True" GridLines="Vertical" CellPadding="4"
-                    ItemType="WingtipToys.Models.CartItem" SelectMethod="GetShoppingCartItems" 
+                    ItemType="WingtipToysV2.Models.CartItem" SelectMethod="GetShoppingCartItems" 
                     CssClass="table table-striped table-bordered" >   
                     <Columns>
                         <asp:BoundField DataField="ProductID" HeaderText="ID" SortExpression="ProductID" />        
