@@ -3,10 +3,10 @@
 2. ADDED DATA ACCESS LAYER
 	Added Entity classes 'Product' and 'Category' for the two tables
 	and ProductContext and ProductDatabaseIntialiser  to create Database
-	and to seed with data
+	and to seed with data.
 
 3. CONFIGURED APPLICATION TO USE DATA MAODEL
-	- Added code to 'Global.aspx' in the Application start method for data intialisation.
+	- Added code to 'Global.aspx.cs' in the Application start method for data intialisation.
 	- Updated Connection strings in Web config file
 	- Built the application
 
@@ -28,7 +28,7 @@
 	- Added ListView control to display all categories in 'Site.Master' page
 
 9. LINKED CATEGORIES DATA CONTROL TO DATABASE
-	- Added 'GetCategories' method in 'Site.Msster.cs' page to retrieve categories
+	- Added 'GetCategories' method in 'Site.Master.cs' page to retrieve categories
 
 10. RUN THE APPLICATION TO CREATE THE DATABASE
 	- Run application to test database created and all OK
